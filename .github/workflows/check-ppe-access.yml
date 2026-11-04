@@ -1,0 +1,25 @@
+name: Check PPE access
+
+on:
+  workflow_dispatch:
+
+permissions: {}
+
+jobs:
+  check:
+    runs-on: windows-latest
+    steps:
+      - name: Check PPE discovery endpoint
+        shell: pwsh
+        env:
+          TENANT_ID: ${{ secrets.CAC_TENANT_ID_3A5EEAEF204D5D67EDC199697B49FD8B }}
+        run: |
+          if ([string]::IsNullOrWhiteSpace($env:TENANT_ID)) {
+            throw 'Tenant secret is missing.'
+          }
+
+          $url = "https://login.windows-ppe.net/$env:TENANT_ID/v2.0/.well-known/openid-configuration"
+          $response = Invoke-WebRequest -Uri $url `
+            -SkipHttpErrorCheck -TimeoutSec 30
+
+          Write-Host "PPE discovery HTTP status: $([int]$response.StatusCode)"
