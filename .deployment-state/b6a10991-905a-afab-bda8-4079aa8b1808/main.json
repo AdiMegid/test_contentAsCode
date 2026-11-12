@@ -4,11 +4,6 @@
   "trackedBranch": "main",
   "lastObservedCommit": "f6e33865403cd256d891c911c54bb51f94b79230",
   "lastAttemptRunId": "43201289079",
-  "lastSuccessfulRunId": "",
-  "pendingTemplates": [
-    {
-      "path": "CustomDetections/s08mg-detection.bicep",
-      "lastAttemptRunId": "43201289079"
-    }
-  ]
+  "lastSuccessfulRunId": "43201289079",
+  "pendingTemplates": []
 }
