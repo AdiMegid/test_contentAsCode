@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "sourceControlId": "b6a10991-905a-afab-bda8-4079aa8b1808",
+  "trackedBranch": "main",
+  "lastObservedCommit": "f6e33865403cd256d891c911c54bb51f94b79230",
+  "lastAttemptRunId": "43201289079",
+  "lastSuccessfulRunId": "",
+  "pendingTemplates": [
+    {
+      "path": "CustomDetections/s08mg-detection.bicep",
+      "lastAttemptRunId": "43201289079"
+    }
+  ]
+}
